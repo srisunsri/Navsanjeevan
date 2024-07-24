@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Sanjeevan</string>
+    <string name="introduction_text">Navsanjeevan, a term that signifies a new life or a new beginning in its purest form...</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_donate">Donate</string>
+    <string name="menu_contact">Contact</string>
+    <string name="menu_about">About</string>
+</resources>

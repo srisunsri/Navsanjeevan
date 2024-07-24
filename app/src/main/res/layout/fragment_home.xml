@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/violet_background"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+
+
+            <!-- Carousel -->
+            <include
+                android:id="@+id/carouselCard"
+                layout="@layout/carousel_card"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginBottom="16dp"/> <!-- Add margin below the carousel -->
+
+            <!-- Arrow above Introduction Text -->
+
+            <!-- Introduction Text -->
+            <ImageView
+                android:id="@+id/arrowAbove"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/ic_arrow"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.509"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/carouselCard" />
+
+            <TextView
+                android:id="@+id/textIntroduction"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:textSize="17sp"
+                android:textColor="@color/black"
+                android:text="@string/introduction_text"
+                app:layout_constraintTop_toBottomOf="@id/arrowAbove"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:fontFamily="@font/rajdhani_medium"
+                android:textAlignment="center"/>
+
+            <!-- Arrow below Introduction Text -->
+            <ImageView
+                android:id="@+id/arrowBelow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow"
+                app:layout_constraintTop_toBottomOf="@id/textIntroduction"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+            <TextView
+                android:id="@+id/space"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="\n\n"
+                app:layout_constraintTop_toBottomOf="@id/arrowBelow"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/workDoneHeader"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Work done by Navsanjeevan"
+                android:fontFamily="@font/rajdhani_medium"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/space"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp"
+                android:textAlignment="center" />
+
+            <!-- Work done by Navsanjeevan Content -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/workDoneContainer1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/workDoneHeader"
+                android:layout_margin="16dp"
+                app:cardElevation="8dp"
+                app:cardCornerRadius="8dp"
+                android:padding="16dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    app:cardElevation="8dp"
+                    app:cardCornerRadius="8dp"
+                    android:padding="16dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        app:cardElevation="8dp"
+                        app:cardCornerRadius="8dp"
+                        android:padding="16dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <!-- First Row -->
+                            <LinearLayout
+                                android:id="@+id/layout1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:gravity="center"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toStartOf="@+id/layout2"
+                                app:layout_constraintHorizontal_weight="1">
+
+                                <TextView
+                                    android:id="@+id/number1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="3000"
+                                    android:textColor="@color/colorPrimary"
+                                    android:fontFamily="@font/rajdhani_medium"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold"
+                                    android:gravity="center" />
+
+                                <TextView
+                                    android:id="@+id/text1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Women developed skills"
+                                    android:fontFamily="@font/rajdhani_medium"
+                                    android:textSize="14sp"
+                                    android:textColor="@android:color/black"
+                                    android:gravity="center" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/layout2"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:gravity="center"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintStart_toEndOf="@id/layout1"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_weight="1">
+
+                                <TextView
+                                    android:id="@+id/number2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="2500"
+                                    android:textColor="@color/colorPrimary"
+                                    android:fontFamily="@font/rajdhani_medium"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold"
+                                    android:gravity="center" />
+
+                                <TextView
+                                    android:id="@+id/text2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Tree plantation for a sustainable environment"
+                                    android:fontFamily="@font/rajdhani_medium"
+                                    android:textSize="14sp"
+                                    android:textColor="@android:color/black"
+                                    android:gravity="center" />
+                            </LinearLayout>
+
+                            <!-- Middle Row -->
+                            <LinearLayout
+                                android:id="@+id/layout3"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:gravity="center"
+                                app:layout_constraintTop_toBottomOf="@id/layout1"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                android:layout_marginTop="16dp">
+
+                                <TextView
+                                    android:id="@+id/number3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="900"
+                                    android:textColor="@color/colorPrimary"
+                                    android:fontFamily="@font/rajdhani_medium"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold"
+                                    android:gravity="center" />
+
+                                <TextView
+                                    android:id="@+id/text3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Community members participated organized health camps"
+                                    android:fontFamily="@font/rajdhani_medium"
+                                    android:textSize="14sp"
+                                    android:textColor="@android:color/black"
+                                    android:gravity="center" />
+                            </LinearLayout>
+
+                            <!-- Last Row -->
+                            <LinearLayout
+                                android:id="@+id/layout4"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:gravity="center"
+                                app:layout_constraintTop_toBottomOf="@id/layout3"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toStartOf="@+id/layout5"
+                                android:layout_marginTop="16dp">
+
+                                <TextView
+                                    android:id="@+id/number4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="250"
+                                    android:textColor="@color/colorPrimary"
+                                    android:fontFamily="@font/rajdhani_medium"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold"
+                                    android:gravity="center" />
+
+                                <TextView
+                                    android:id="@+id/text4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="SHG activated and developed"
+                                    android:fontFamily="@font/rajdhani_medium"
+                                    android:textSize="14sp"
+                                    android:textColor="@android:color/black"
+                                    android:gravity="center" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/layout5"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:gravity="center"
+                                app:layout_constraintTop_toBottomOf="@id/layout3"
+                                app:layout_constraintStart_toEndOf="@id/layout4"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                android:layout_marginTop="16dp">
+
+                                <TextView
+                                    android:id="@+id/number5"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="2500"
+                                    android:textColor="@color/colorPrimary"
+                                    android:fontFamily="@font/rajdhani_medium"
+                                    android:textSize="18sp"
+                                    android:textStyle="bold"
+                                    android:gravity="center" />
+
+                                <TextView
+                                    android:id="@+id/text5"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Students have enrolled in the Skill development"
+                                    android:fontFamily="@font/rajdhani_medium"
+                                    android:textSize="14sp"
+                                    android:textColor="@android:color/black"
+                                    android:gravity="center" />
+                            </LinearLayout>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                </androidx.cardview.widget.CardView>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/space1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="\n\n"
+                app:layout_constraintTop_toBottomOf="@id/workDoneContainer1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/visionAndMissionHeader"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Vision and Mission"
+                android:fontFamily="@font/rajdhani_medium"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/space1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp"
+                android:textAlignment="center" />
+
+            <!-- Mission CardView -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardMission"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:layout_constraintTop_toBottomOf="@id/visionAndMissionHeader"
+                android:fontFamily="@font/rajdhani_medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/imageMission"
+                        android:layout_width="0dp"
+                        android:layout_height="200dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img7"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textMission"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="MISSION\nNavsanjeevan Social trust strives to build an equitable and egalitarian society. We aim to alleviate poverty by empowering the next generation with Skill Education. We work on diminishing the skill gap that exists in the present world, by making youth market-ready. Navsanjeevan aims to build a healthy, vibrant, and dynamic society by empowering youth through skill education and providing sustainable employment/self-employment relevant to the market needs."
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:gravity="center_horizontal"
+                        android:fontFamily="@font/rajdhani_medium"
+                        app:layout_constraintTop_toBottomOf="@id/imageMission"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Vision CardView -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardVision"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:layout_constraintTop_toBottomOf="@id/cardMission"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/imageVision"
+                        android:layout_width="0dp"
+                        android:layout_height="200dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img6"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textVision"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="VISION\nNavsanjeevan Social Trust has endeavored on a journey to erase the class differences that exist in the present world. For this, we have created a platform for the marginalized youth, women, and farmers, aiming to educate, inform, and inspire them to contribute actively to the formation of an egalitarian and enlightened society."
+                        android:textColor="@color/black"
+                        android:gravity="center_horizontal"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/rajdhani_medium"
+                        app:layout_constraintTop_toBottomOf="@id/imageVision"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+            <!-- Programs Header -->
+            <TextView
+                android:id="@+id/programsHeader"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Programs"
+                android:fontFamily="@font/rajdhani_medium"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/cardVision"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp"
+                android:textAlignment="center" />
+
+            <!-- Programs Content -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/programsContainer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:layout_constraintTop_toBottomOf="@id/programsHeader"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginBottom="15dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imageMission1"
+                        android:layout_width="250dp"
+                        android:layout_height="200dp"
+                        android:scaleType="centerCrop"
+                        android:layout_marginTop="5dp"
+                        android:src="@drawable/img8"
+                        android:layout_gravity="center"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                    <!-- Program 1 -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="1. Livelihood Development Program for Women."
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/rajdhani_medium"
+                        android:padding="8dp"
+                        android:textAlignment="viewStart"/>
+
+
+
+                    <!-- Program 2 -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="2. Rural Development Program."
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/rajdhani_medium"
+                        android:padding="8dp"
+                        android:textAlignment="viewStart"/>
+
+                    <!-- Program 3 -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="3. Empowerment of Village Women Leaders Program."
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/rajdhani_medium"
+                        android:padding="8dp"
+                        android:textAlignment="viewStart"/>
+
+                    <!-- Program 4 -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="4. Child Development Program."
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/rajdhani_medium"
+                        android:padding="8dp"
+                        android:textAlignment="viewStart"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="5. Community Development"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/rajdhani_medium"
+                        android:padding="8dp"
+                        android:textAlignment="viewStart"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:text="  11"
+                app:layout_constraintTop_toBottomOf="@id/programsContainer"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="parent"
+                android:textColor="@color/black"
+                android:textSize="300dp"
+                android:fontFamily="@font/rajdhani_medium"
+                android:padding="8dp"
+                android:textAlignment="viewStart"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
